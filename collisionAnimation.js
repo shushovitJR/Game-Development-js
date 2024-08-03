@@ -52,7 +52,11 @@ function animate(){
             explosions.splice(i,1);
             i--;
         }
+
     }
+    ctx.font = "16px Arial";
+                ctx.fillStyle = "white";
+                ctx.fillText("Click to Create Explosion",100,100);
     requestAnimationFrame(animate);
 };
 animate();

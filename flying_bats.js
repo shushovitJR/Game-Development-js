@@ -23,8 +23,8 @@ class Enemy{
         this.flapSpeed = Math.floor(Math.random()* 3 + 1);
     }
     update(){
-        this.x+=Math.random()*5-2.5;
-        this.y+=Math.random()*5-2.5;
+        this.x+=Math.random()*1-0.5;
+        this.y+=Math.random()*1-0.5;
         //animate sprites
         if (gameFrame % this.flapSpeed == 0){
             this.frame > 4 ? this.frame=0 : this.frame++;
@@ -44,7 +44,7 @@ for (let i =0;i<numberOfEnemies;i++){
 function animate(){
     ctx.clearRect(0,0,CANVAS_WIDTH,CANVAS_HEIGHT);
     enemiesArray.forEach(enemy=>{
-        // enemy.update();
+        enemy.update();
         enemy.draw();
     })
     gameFrame++;
